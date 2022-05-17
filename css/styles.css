@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Tags
+/* 2. Body
+/* 3. Game
+/*   3.1 Pads
+/*   3.2 Center
+/*      3.2.1 GUI
+/* 4. Footer
+/**********************************/
+
+/**********************************/
+/* Color Guide:
+/* 
+/* #00A74A : normal-green
+/* #9F0F17 : normal-red
+/* #CCA707 : normal-yellow
+/* #094A8F : normal-blue
+/* #13ff7c : light-green
+/* #ff4c4c : light-red
+/* #fed93f : light-yellow
+/* #1c8cff : light-blue
+/* #333333 : gray
+/* #ECE7EE : center
+/* #32050C : counter-color
+/*
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+	--clr-normal-green: #00A74A;
+	--clr-normal-red: #9F0F17;
+	--clr-normal-yellow: #CCA707;
+	--clr-normal-blue: #094A8F;
+
+	--clr-light-green: #13ff7c;
+	--clr-light-red: #ff4c4c;
+	--clr-light-yellow: #fed93f;
+	--clr-light-blue: #1c8cff;
+
+	--clr-border: #333333;
+	--clr-center: #ECE7EE;
+
+	--clr-counter-bg: #32050C;
+	--clr-counter-off: #430710;
+	--clr-counter-on: #DC0D29;
+
+	--clr-switch: #3193DE;
+
+	--game-size: 48rem;
+	--game-border: 1.5rem solid var(--clr-border);
+}
+
+/**********************************/
+/* 1. Tags
+/**********************************/
+html {
+	font-size: 62.5%;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	font-family: "Bungge", Verdana, sans-serif;
+
+}
+
+/**********************************/
+/* 2. Body
+/**********************************/
+.container {
+	width: var(--game-size);
+	margin: 0 auto;
+}
+
+/**********************************/
+/* 3. Game
+
+/**********************************/
+
+.game {
+	width: var(--game-size);
+	height: var(--game-size);
+	display: grid;
+	grid-template: 1fr 1fr/ 1fr 1fr;
+	margin-top: 5rem;
+	position: relative;
+
+}
+
+.game__title {
+	font-size: 4rem;
+	text-transform: uppercase;
+	margin: 0;
+	padding-left: 1.2rem;
+	padding-top: 4.7rem;
+}
+
+.game__title .reg {
+	font-family: Verdana, sans-serif;
+	font-size: 1.8rem;
+	margin-left: -1rem;
+}
+
+/**********************************/
+/* 3.1 Pads
+/**********************************/
+.game__pad {
+	width: calc(var(--game-size) / 2);
+	height: calc(var(--game-size)/ 2);
+}
+
+.game_pad--tl {
+	background-color: var(--clr-normal-green);
+	border-top-left-radius: 100%;
+	border: 2rem solid var(--clr-border)
+}
+
+.game_pad--tr {
+	background-color: var(--clr-normal-red);
+	border-top-right-radius: 100%;
+	border: 2rem solid var(--clr-border)
+}
+
+.game_pad--bl {
+	background-color: var(--clr-normal-yellow);
+	border-bottom-left-radius: 100%;
+	border: 2rem solid var(--clr-border)
+}
+
+.game_pad--br {
+	background-color: var(--clr-normal-blue);
+	border-bottom-right-radius: 100%;
+	border: 2rem solid var(--clr-border)
+}
+
+.game_pad--tl.game__pad--active {
+	background: var(--clr-light-green);
+}
+
+.game_pad--tr.game__pad--active {
+	background: var(--clr-light-red)
+}
+
+.game_pad--bl.game__pad--active {
+	background: var(--clr-light-yellow);
+}
+
+.game_pad--br.game__pad--active {
+	background: var(--clr-light-blue);
+}
+
+.game__pad--btn {
+	cursor: pointer;
+}
+
+/**********************************/
+/* 3.2 Center
+/**********************************/
+.game__options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--clr-center);
+	width: calc(var(--game-size) / 2);
+	height: calc(var(--game-size) / 2);
+	position: absolute;
+	top: calc(var(--game-size) / 4);
+	left: calc(var(--game-size) / 4);
+	border: 2rem solid var(--clr-border);
+	border-radius: 50%;
+
+}
+
+
+
+
+/**********************************/
+/* 3.2.1 GUI
+/**********************************/
+
+/**********************************/
+/* 4. Footer
+/**********************************/
+footer {
+	text-align: center;
+	margin-top: 5rem;
+
+}
+
+
+footer .copy {
+	color: black;
+	font-size: 3rem;
+}
