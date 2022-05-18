@@ -85,6 +85,8 @@ body {
 	margin: 0 auto;
 }
 
+
+
 /**********************************/
 /* 3. Game
 
@@ -170,9 +172,6 @@ body {
 /* 3.2 Center
 /**********************************/
 .game__options {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background: var(--clr-center);
 	width: calc(var(--game-size) / 2);
 	height: calc(var(--game-size) / 2);
@@ -181,6 +180,10 @@ body {
 	left: calc(var(--game-size) / 4);
 	border: 2rem solid var(--clr-border);
 	border-radius: 50%;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+
 
 }
 
@@ -190,6 +193,130 @@ body {
 /**********************************/
 /* 3.2.1 GUI
 /**********************************/
+.gui {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+
+}
+
+.group {
+	margin-right: 2.0rem;
+}
+
+.group-large {
+	display: flex;
+	width: 10rem;
+	margin-left: 6rem;
+	padding-top: 0.5rem;
+}
+
+.group_collum-one {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+
+}
+
+.gui__label {
+	font-family: "Arima Madurai", cursive;
+	font-weight: bold;
+	font-size: 0.75rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.gui__label--switch {
+	margin: 0;
+	padding-top: 0.75rem;
+}
+
+.gui__btn {
+
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-right: .2rem;
+	border-radius: 5em;
+	box-shadow: 0 .2rem .3rem #222;
+	border: .4rem solid #444;
+}
+
+.gui__btn:hover {
+	cursor: pointer;
+}
+
+.gui__btn:active {
+	transform: translate(0, .2rem);
+	box-shadow: none;
+}
+
+.gui__btn--start {
+	background: red;
+}
+
+.gui__btn--strict {
+	background: yellow;
+}
+
+.gui__btn-switch {
+	background: #000;
+	width: 5rem;
+	border-radius: .3rem;
+	margin: 0 .5rem 0 .5rem;
+	height: 2.3rem;
+	cursor: pointer;
+}
+
+.gui__btn-switch:before {
+	content: "";
+	display: block;
+	position: relative;
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 0.3rem;
+	background-color: var(--clr-switch);
+	border: .2rem solid #333;
+	left: 2.6rem;
+}
+
+.gui__btn-switch--on:before {
+	left: 0;
+}
+
+.gui__counter {
+	background: var(--clr-counter-bg);
+	color: var(--clr-counter-off);
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: right;
+	border: .3rem solid #000;
+	border-radius: 1rem;
+	width: 5rem;
+}
+
+.gui__conuter--on {
+	color: var(--clr-counter-on);
+}
+
+.gui__led {
+	background-color: #32050c;
+
+	width: .8rem;
+	height: .8rem;
+	border: .2rem solid #222;
+	border-radius: 2rem;
+
+}
+
+.gui__led--active {
+	background-color: red;
+}
+
+
 
 /**********************************/
 /* 4. Footer
