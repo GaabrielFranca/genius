@@ -183,8 +183,6 @@ body {
 	/* display: flex;
 	flex-direction: column;
 	align-items: center; */
-
-
 }
 
 
@@ -298,7 +296,7 @@ body {
 	width: 5rem;
 }
 
-.gui__conuter--on {
+.gui__counter--on {
 	color: var(--clr-counter-on);
 }
 
@@ -331,4 +329,10 @@ footer {
 footer .copy {
 	color: black;
 	font-size: 3rem;
+}
+
+@media(max-width:600px) {
+	html {
+		font-size: 45%;
+	}
 }
